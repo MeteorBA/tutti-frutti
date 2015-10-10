@@ -3,5 +3,12 @@
     <h1>Juego</h1>
     <h3>Players: {{playersCount}} total</h3>
     <p>{{playerNames}}</p>
+    {{#if isGameStarted}}
+      <h4> YA ARRANCAMOS!</h4>
+      <button id="endGame">Terminar</button>
+    {{else}}
+      <p>el juego no arranco todavía</p>
+      <button id="startGame">Arrancar</button>
+    {{/if}}
   {{/if}}
 </template>
