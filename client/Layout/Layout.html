@@ -1,6 +1,8 @@
-<template name="Layout">
+<template name="Join">
+  {{#if userIsNotJoined}}
   <form id="join">
     <input type="text" name="name" />
     <button type="submit">Unirse</button>
   </form>
+  {{/if}}
 </template>
