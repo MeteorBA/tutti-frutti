@@ -5,7 +5,8 @@ Template.Join.events({
     e.preventDefault();
     let name = $(e.target).children("[name=name]").val()
     let user = Users.insert({name: name})
-    let game = Games.update({_id: "SScqmb9BANLvNWsSY"}, {$push: {players: user} })
+    let game = Games.findOne();
+    Games.update({_id: game._id}, {$push: {players: user} })
     Session.set("currentView", "Game")
   }
 })

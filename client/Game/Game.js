@@ -10,8 +10,13 @@ Template.Game.helpers({
   },
 
   playersCount: function(){
-    let game = Games.findOne("SScqmb9BANLvNWsSY")
+    let game = Games.findOne()
     console.log(game)
     return game.players.length
+  },
+
+  playerNames: function() {
+    let game = Games.findOne()
+    return game.players.map(player => player.name).join(", ")
   }
 })
