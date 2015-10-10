@@ -25,6 +25,11 @@ Template.Join.helpers({
  *       name: ""
  *     }
  *   ],
+      columns: [
+        {
+          name: Sinomimos de pija
+        }
+      ]
  *   rounds: [
  *     {
  *       letter: "",
