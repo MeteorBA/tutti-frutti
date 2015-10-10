@@ -4,6 +4,7 @@ if (!game) {
   Games.insert({
     columns: [
       "nombres", "paises", "colores", "sinonimos de japi"
-    ]
+    ],
+    started: false
   })
 }
