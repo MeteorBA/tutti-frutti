@@ -10,3 +10,7 @@ body > .grid {
 .column {
   max-width: 450px;
 }
+
+#joinForm {
+  margin: 0 auto;
+}
