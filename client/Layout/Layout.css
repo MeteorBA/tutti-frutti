@@ -1,16 +1,19 @@
 body {
-  background-color: #DADADA;
+   background: #f3f5f6;
 }
-body > .grid {
-  height: 100%;
+#app-container {
+   padding: 4em 0 0;
 }
-.image {
-  margin-top: -100px;
+footer.ui {
+   margin-top:1em;
 }
-.column {
-  max-width: 450px;
+.logo {
+   display: block;
+   margin: 0 auto 0.5em;
 }
-
-#joinForm {
-  margin: 0 auto;
+.uppercase {
+   text-transform: uppercase;
+}
+.text-center {
+   text-align: center;
 }

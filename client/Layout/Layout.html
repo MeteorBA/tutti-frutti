@@ -1,27 +1,27 @@
 <template name="Join">
-  <div class="ui middle aligned center aligned grid">
-    <div class="column">
-      {{#if userIsNotJoined}}
-      <form id="join" class="ui large form">
-        <div class="ui stacked segment">
-          <h1>
-            <img src="https://d14xs1qewsqjcd.cloudfront.net/assets/meteor-logo.png" width="200">
-            <br />
-            <small>Buenos Aires</small>
-        </h1>
-          <br>
-          <div class="inline field">
-            <div class="ui right pointing label">
-              Nombre del jugador
-            </div>
-            <input type="text" name="name">
-          </div>
-          <br>
-          <button class="ui fluid large teal submit button">Quiero jugar YA!</button>
-        </div>
-        <div class="ui error message"></div>
-      </form>
-      {{/if}}
-    </div>
-  </div>
+   <div id="app-container" class="ui container">
+      <div class="ui middle aligned center aligned grid">
+         <div class="column">
+         {{#if userIsNotJoined}}
+            <form id="" class="ui large form">
+               <div class="ui stacked tall segment text-center ">
+                  <div class="field" placeholder="Last Name">
+                     <div class="ui pointing below label">
+                        Ingresa tu nombre o apodo
+                     </div>
+                     <input type="text" class="text-center" name="name">
+                  </div>
+                  <button type="submit" class="ui fluid large teal submit button">JUGAR</button>
+               </div>
+            </form>
+         {{/if}}
+            <footer class="ui text-center">
+               <img src="meteor-logo.png" width="120" alt="" class="logo">
+               <small class="uppercase">Buenos Aires Meetup</small>
+            </footer>
+         </div>
+      </div>
+   </div>
 </template>
+
+
