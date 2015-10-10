@@ -1,8 +1,35 @@
-<template name="Join">
-  {{#if userIsNotJoined}}
-  <form id="join">
-    <input type="text" name="name" />
-    <button type="submit">Unirse</button>
-  </form>
-  {{/if}}
-</template>
+<div class="ui middle aligned center aligned grid">
+
+   <div class="column">
+
+      <template name="Join">
+         {{#if userIsNotJoined}}
+         <form id="join" class="ui large form">
+
+            <div class="ui stacked segment">
+               <h1>
+                  <img src="https://d14xs1qewsqjcd.cloudfront.net/assets/meteor-logo.png" width="200">
+                  <br>
+                  <small>Buenos Aires</small>
+               </h1>
+               <br>
+               <div class="inline field">
+                   <div class="ui right pointing label">
+                     Nombre del jugador
+                   </div>
+                   <input type="text" name="name">
+                 </div>
+
+                 <br>
+
+               <div class="ui fluid large teal submit button">Quiero jugar YA!</div>
+            </div>
+
+            <div class="ui error message"></div>
+
+         </form>
+         {{/if}}
+      </template
+   </div>
+
+</div>
