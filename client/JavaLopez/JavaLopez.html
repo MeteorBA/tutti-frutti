@@ -4,12 +4,16 @@
     <div class="ui form">
       <div class="fields">
       {{#each column}}
-        <div class="field">
-          <label>{{name}}</label>
-          <input type="text" placeholder="{{name}}">
-        </div>
+        {{> field}}
       {{/each}}
       </div>
     </div>
+  </div>
+</template>
+
+<template name="field">
+  <div class="field">
+    <label>{{.}}</label>
+    <input type="text" placeholder="{{.}}">
   </div>
 </template>
