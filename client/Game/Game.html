@@ -4,11 +4,12 @@
       <div class="ui middle aligned center aligned grid">
          <div class="column">
             {{#unless isGameStarted}}
-               <button id="startGame" class="fluid ui green basic button uppercase">Compenzar juego</button>
+               <button id="startGame" class="fluid ui olive basic button uppercase">Compenzar juego</button>
 
                <br>
 
                <h4 class="ui horizontal divider">
+                  <i class="users icon"></i>
                   {{playersCount}} usuarios esperando para jugar
                </h4>
 
@@ -23,7 +24,44 @@
                {{/each}}
                </div>
             {{else}}
-               <button id="endGame" class="fluid ui red basic button uppercase">Termine</button>
+            <h4 class="ui horizontal divider">
+               Letra: <u>{{game.letter}}</u>
+            </h4>
+            <form class="ui padded form container">
+
+                  <table class="ui olive table">
+                    <thead>
+                      <tr>
+                      <th class="right aligned uppercase">Categoria</th>
+                      <th class="uppercase">Palabra</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                     {{#each columns}}
+                      <tr>
+                        <td class="right aligned capitalize">{{.}}</td>
+                        <td>
+                           <div class="field">
+                               <input type="text">
+                             </div>
+                        </td>
+                      </tr>
+                     {{/each}}
+
+                    </tbody>
+                  </table>
+                  <div class="ui fluid labeled button" tabindex="0">
+                     <button id="endGame" class="fluid ui olive button uppercase">
+                        <i class="heart icon"></i> Termine
+                     </button>
+                     <a class="ui basic olive left pointing label">
+                        {{time}}
+                     </a>
+                  </div>
+               </form>
+
+
+
             {{/unless}}
          </div>
       </div>
