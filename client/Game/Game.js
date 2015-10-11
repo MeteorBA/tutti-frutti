@@ -1,19 +1,5 @@
 Session.set("isGameStarted", false)
 
-// let clock = 10;
-
-// let timeLeft = function() {
-//   if (clock > 0) {
-//     clock++;
-//     return console.log(clock);
-//   } else {
-//     console.log("That's All Folks");
-//     return Meteor.clearInterval(interval);
-//   }
-// };
-
-// let interval = Meteor.setInterval(timeLeft, 1000);
-
 Template.Game.events({
   'click button#startGame': (e) => {
     let game = Games.findOne()
