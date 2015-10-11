@@ -3,14 +3,28 @@
    <div id="app-container" class="ui container">
       <div class="ui middle aligned center aligned grid">
          <div class="column">
-            {{#if isGameStarted}}
-               <button id="endGame" class="fluid ui red basic button uppercase">Termine</button>
-            {{else}}
+            {{#unless isGameStarted}}
+               <button id="startGame" class="fluid ui green basic button uppercase">Compenzar juego</button>
+
+               <br>
+
                <h4 class="ui horizontal divider">
                   {{playersCount}} usuarios esperando para jugar
                </h4>
-               <button id="startGame" class="fluid ui green basic button uppercase">Compenzar juego</button>
-            {{/if}}
+
+               <div class="ui padded grid">
+               {{#each players}}
+                  <div class="two wide column">
+                     <a class="ui image label">
+                        <img src="http://semantic-ui.com/images/avatar/small/joe.jpg">
+                        {{.}}
+                     </a>
+                  </div>
+               {{/each}}
+               </div>
+            {{else}}
+               <button id="endGame" class="fluid ui red basic button uppercase">Termine</button>
+            {{/unless}}
          </div>
       </div>
    </div>
