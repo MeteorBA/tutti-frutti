@@ -31,6 +31,13 @@ Template.Game.helpers({
     return players.fetch().map(player => player.name).join(", ")
   },
 
+  players: function() {
+    let game = Games.findOne()
+    let players = Users.find({_id: {$in: game.players}})
+
+    return players.fetch().map(player => player.name)
+  },
+
   isGameStarted: function() {
     let game = Games.findOne()
     return game.started

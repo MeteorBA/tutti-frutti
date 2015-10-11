@@ -1,15 +1,19 @@
 <template name="Game">
-  {{#if isOnGame}}
-    <h1>Juego</h1>
-    <h3>Players: {{playersCount}} total</h3>
-    <p>{{playerNames}}</p>
-    {{#if isGameStarted}}
-      <h4> YA ARRANCAMOS!</h4>
-      <button id="endGame">Terminar</button>
-    {{else}}
-      <p>el juego no arranco todavía</p>
-      <button id="startGame">Arrancar</button>
-    {{/if}}
-  {{/if}}
+{{#if isOnGame}}
+   <div id="app-container" class="ui container">
+      <div class="ui middle aligned center aligned grid">
+         <div class="column">
+            {{#if isGameStarted}}
+               <button id="endGame" class="fluid ui red basic button">Termine!</button>
+            {{else}}
+               <h4 class="ui horizontal divider">
+                  {{playersCount}} usuarios esperando para jugar
+               </h4>
+               <button id="startGame" class="fluid ui green basic button">Compenzar juego!</button>
+            {{/if}}
+         </div>
+      </div>
+   </div>
+{{/if}}
 </template>
- 
+

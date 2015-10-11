@@ -1,8 +1,8 @@
 <template name="Join">
+{{#if userIsNotJoined}}
    <div id="app-container" class="ui container">
       <div class="ui middle aligned center aligned grid">
          <div class="column">
-         {{#if userIsNotJoined}}
             <form id="join" class="ui large form">
                <div class="ui stacked tall segment text-center ">
                   <div class="field" placeholder="Last Name">
@@ -14,7 +14,6 @@
                   <button type="submit" class="ui fluid large teal submit button">JUGAR</button>
                </div>
             </form>
-         {{/if}}
             <footer class="ui text-center">
                <img src="meteor-logo.png" width="120" alt="" class="logo">
                <small class="uppercase">Buenos Aires Meetup</small>
@@ -22,6 +21,7 @@
          </div>
       </div>
    </div>
+{{/if}}
 </template>
 
 
